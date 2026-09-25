@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Manrope } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { LenisProvider } from "@/components/providers/lenis-provider"
+import { absoluteUrl, isProductionDeployment, seoConfig } from "@/lib/seo"
 import "./globals.css"
 
 const manrope = Manrope({
@@ -11,26 +12,52 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: "IVT Media Group | Media, Technology, Automation & Ventures",
-  description:
-    "IVT Media Group develops media systems, technology platforms, automation infrastructure, digital brands, and emerging ventures.",
-  generator: "v0.app",
-  icons: {
-    icon: [
+  metadataBase: new URL(seoConfig.siteUrl),
+  title: {
+    default: seoConfig.defaultTitle,
+    template: seoConfig.titleTemplate,
+  },
+  description: seoConfig.defaultDescription,
+  applicationName: seoConfig.siteName,
+  alternates: {
+    canonical: absoluteUrl("/"),
+  },
+  openGraph: {
+    title: seoConfig.defaultTitle,
+    description: seoConfig.defaultDescription,
+    url: absoluteUrl("/"),
+    siteName: seoConfig.siteName,
+    type: "website",
+    locale: seoConfig.locale,
+    images: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: absoluteUrl(seoConfig.defaultOgImage),
+        width: 1200,
+        height: 630,
+        alt: "IVT MEDIA GROUP - Education Before Speculation",
       },
     ],
-    apple: "/apple-icon.png",
+  },
+  twitter: {
+    card: seoConfig.twitterCard,
+    title: seoConfig.defaultTitle,
+    description: seoConfig.defaultDescription,
+    images: [absoluteUrl(seoConfig.defaultOgImage)],
+  },
+  robots: isProductionDeployment
+    ? {
+        index: true,
+        follow: true,
+      }
+    : {
+        index: false,
+        follow: false,
+        nocache: true,
+      },
+  icons: {
+    icon: "/ivt-media-group-logo-429.png",
+    shortcut: "/ivt-media-group-logo-429.png",
+    apple: "/ivt-media-group-logo-429.png",
   },
 }
 
