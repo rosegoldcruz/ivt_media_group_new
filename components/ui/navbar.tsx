@@ -1,5 +1,6 @@
 "use client"
 
+import { AnimatedBackground } from "@/components/core/animated-background"
 import Link from "next/link"
 
 const navLinks = [
@@ -16,15 +17,23 @@ export function Navbar() {
           IVT Media Group
         </Link>
         <div className="flex items-center gap-1">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="px-4 py-1.5 text-sm rounded-full transition-colors text-zinc-400 hover:text-zinc-100"
-            >
-              {link.label}
-            </Link>
-          ))}
+          <AnimatedBackground
+            defaultValue={navLinks[0].label}
+            className="rounded-full bg-zinc-800/80 ring-1 ring-zinc-700/60"
+            transition={{ type: "spring", bounce: 0.2, duration: 0.3 }}
+            enableHover
+          >
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                data-id={link.label}
+                className="px-4 py-1.5 text-sm rounded-full transition-colors duration-300 text-zinc-400 hover:text-zinc-100"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </AnimatedBackground>
           <Link
             href="#contact"
             className="ml-2 px-4 py-1.5 text-sm rounded-full bg-zinc-100 text-zinc-900 font-medium hover:bg-zinc-200 transition-colors"
