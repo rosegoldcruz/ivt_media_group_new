@@ -5,7 +5,6 @@ export function GhlFormSection() {
     <section id="contact" className="px-6 py-24 border-t border-zinc-900/80">
       <div className="max-w-5xl mx-auto grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
         <div className="lg:sticky lg:top-28">
-          <p className="text-sm font-medium text-zinc-500 uppercase tracking-wider mb-4">Contact</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-zinc-100 mb-4">Request Access.</h2>
           <p className="text-zinc-500 text-lg leading-relaxed text-balance">
             Share your details and IVT Media Group will follow up with the right next step.
