@@ -6,7 +6,6 @@ const navLinks = [
   { href: "#company", label: "Company" },
   { href: "#capabilities", label: "Capabilities" },
   { href: "#ventures", label: "Ventures" },
-  { href: "#contact", label: "Contact" },
 ]
 
 export function Navbar() {
@@ -27,10 +26,10 @@ export function Navbar() {
             </Link>
           ))}
           <Link
-            href="#contact"
+            href="#ventures"
             className="ml-2 px-4 py-1.5 text-sm rounded-full bg-zinc-100 text-zinc-900 font-medium hover:bg-zinc-200 transition-colors"
           >
-            Start a Conversation
+            View Ventures
           </Link>
         </div>
       </nav>
