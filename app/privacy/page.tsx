@@ -8,7 +8,7 @@ const lastUpdated = "September 26, 2026"
 export const metadata: Metadata = pageMetadata({
   title: "Privacy Policy",
   description:
-    "Review how IVT Media Group LLC collects, uses, protects, and shares website, inquiry, and SMS consent information.",
+    "Review how IVT Media Group LLC handles website, inquiry, brand, media, AI, automation, and SMS consent information.",
   pathname: "/privacy",
 })
 
@@ -20,7 +20,7 @@ export default function PrivacyPage() {
     url: "https://ivtmediagroup.com/privacy",
     name: "Privacy Policy | IVT Media Group LLC",
     description:
-      "Review how IVT Media Group LLC collects, uses, protects, and shares website, inquiry, and SMS consent information.",
+      "Review how IVT Media Group LLC handles website, inquiry, brand, media, AI, automation, and SMS consent information.",
     isPartOf: {
       "@id": "https://ivtmediagroup.com#website",
     },
@@ -34,17 +34,24 @@ export default function PrivacyPage() {
       <p>
         This Privacy Policy explains how IVT Media Group LLC (&quot;IVT Media Group,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) collects,
         uses, discloses, and protects information submitted through this website, our contact forms, SMS opt-in forms,
-        and related communications.
+        client inquiries, media and brand projects, AI and automation services, technology workflows, and related
+        communications.
       </p>
 
       <h2>Information We Collect</h2>
-      <p>We may collect information you choose to provide, including your first name, last name, email address, phone number, form responses, inquiry details, communication preferences, and any other information you submit to us.</p>
+      <p>We may collect information you choose to provide, including your first name, last name, email address, phone number, business or brand name, website URL, form responses, inquiry details, project goals, budget or timeline details, communication preferences, and any other information you submit to us.</p>
+      <p>When you discuss or engage us for media, technology, AI, automation, creative, consulting, or brand services, we may collect business information needed to evaluate or perform the work. This may include brand assets, campaign details, content drafts, audience or customer segments, workflow descriptions, tool stacks, CRM or automation requirements, integrations, prompt or agent requirements, analytics, meeting notes, files, credentials supplied through approved secure channels, and other project materials you provide.</p>
       <p>We may also collect technical information automatically, including IP address, browser type, device information, pages visited, referral source, approximate location derived from technical data, timestamps, cookies, analytics data, and similar usage information.</p>
       <p>For SMS and messaging compliance, we may maintain records of consent, opt-in source, opt-in date and time, phone number, message history, opt-out requests, HELP requests, delivery information, and related compliance records.</p>
 
       <h2>How We Use Information</h2>
-      <p>We use information to respond to inquiries, provide requested information, operate and improve our website, manage business communications, schedule calls or follow-ups, deliver requested services, maintain records, prevent abuse, comply with legal obligations, and protect our rights.</p>
+      <p>We use information to respond to inquiries, provide requested information, evaluate potential projects, prepare proposals, operate and improve our website, manage business communications, schedule calls or follow-ups, deliver media, technology, AI, automation, brand, or consulting services, maintain records, prevent abuse, comply with legal obligations, and protect our rights.</p>
+      <p>Project information may be used to design workflows, configure automations, create media or brand assets, build technology systems, test integrations, generate drafts, analyze performance, document requirements, support client delivery, and maintain internal quality control.</p>
       <p>If you expressly opt in to SMS communications, we may use your phone number to send transactional, informational, service-related, or promotional text messages based on the consent category you selected.</p>
+
+      <h2>AI, Automation, and Technology Tools</h2>
+      <p>We may use internal systems, third-party software, AI tools, automation platforms, CRM systems, analytics providers, hosting services, communication tools, and other technology vendors to operate our business and provide services. Information processed through these tools is used for business purposes such as project planning, content creation, automation setup, analysis, support, and service delivery.</p>
+      <p>Do not submit confidential credentials, regulated data, sensitive personal information, health information, financial account information, government identification numbers, or information you are not authorized to share unless we have specifically agreed in writing to an approved handling process.</p>
 
       <h2>SMS, Text Messaging, and Mobile Information</h2>
       <p>By checking an SMS consent box and submitting a form, you authorize IVT Media Group LLC to send text messages to the phone number provided. Message frequency varies. Message and data rates may apply. Reply STOP to opt out. Reply HELP for help. Consent is not a condition of purchase.</p>
@@ -53,7 +60,7 @@ export default function PrivacyPage() {
       <p>Mobile information will not be shared with third parties or affiliates for their marketing or promotional purposes. Text messaging originator opt-in data and consent records will not be shared with third parties except service providers and vendors that support delivery, compliance, security, analytics, or operation of the messaging program.</p>
 
       <h2>How We Share Information</h2>
-      <p>We may share information with service providers that help us operate the website, manage forms, host data, process communications, deliver email or SMS messages, provide analytics, maintain security, or support business operations.</p>
+      <p>We may share information with service providers that help us operate the website, manage forms, host data, process communications, deliver email or SMS messages, provide analytics, maintain security, support media or technology production, process files, operate AI or automation tools, or support business operations.</p>
       <p>We may disclose information if required by law, subpoena, court order, legal process, regulatory request, or to protect the rights, safety, property, or security of IVT Media Group, our users, or others.</p>
       <p>We may transfer information in connection with a business transaction, such as a merger, acquisition, financing, reorganization, sale of assets, or similar event, subject to appropriate safeguards where required by law.</p>
 

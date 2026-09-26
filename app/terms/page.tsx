@@ -8,7 +8,7 @@ const lastUpdated = "September 26, 2026"
 export const metadata: Metadata = pageMetadata({
   title: "Terms of Service",
   description:
-    "Read IVT Media Group LLC website, communication, SMS, and service terms, including opt-out instructions and disclaimers.",
+    "Read IVT Media Group LLC website, media, technology, AI, automation, brand services, communication, and SMS terms.",
   pathname: "/terms",
 })
 
@@ -20,7 +20,7 @@ export default function TermsPage() {
     url: "https://ivtmediagroup.com/terms",
     name: "Terms of Service | IVT Media Group LLC",
     description:
-      "Read IVT Media Group LLC website, communication, SMS, and service terms, including opt-out instructions and disclaimers.",
+      "Read IVT Media Group LLC website, media, technology, AI, automation, brand services, communication, and SMS terms.",
     isPartOf: {
       "@id": "https://ivtmediagroup.com#website",
     },
@@ -33,8 +33,8 @@ export default function TermsPage() {
 
       <p>
         These Terms of Service (&quot;Terms&quot;) govern your access to and use of the IVT Media Group LLC website, forms,
-        content, communications, and related online services. By using this website or submitting information through a
-        form, you agree to these Terms.
+        content, communications, media, technology, AI, automation, brand, consulting, and related online services. By
+        using this website or submitting information through a form, you agree to these Terms.
       </p>
 
       <h2>Company Information</h2>
@@ -44,13 +44,22 @@ export default function TermsPage() {
       <p>You may use this website only for lawful purposes and in accordance with these Terms. You agree not to interfere with the operation of the site, attempt unauthorized access, submit false or misleading information, abuse forms or communication systems, upload malicious code, scrape content without permission, or use the site in a way that violates applicable law or the rights of others.</p>
 
       <h2>Informational Content Only</h2>
-      <p>Website content is provided for general informational, educational, media, technology, and business communication purposes. Content does not constitute legal, financial, tax, investment, cybersecurity, or professional advice. You are responsible for your own decisions and should consult qualified professionals where appropriate.</p>
+      <p>Website content is provided for general informational, educational, media, technology, AI, automation, brand, and business communication purposes. Content does not constitute legal, financial, tax, investment, cybersecurity, or professional advice. You are responsible for your own decisions and should consult qualified professionals where appropriate.</p>
 
-      <h2>No Investment or Earnings Guarantee</h2>
-      <p>Any references to digital finance, blockchain, AI, automation, ventures, media projects, or related ecosystems are informational and do not guarantee results, earnings, investment performance, token value, business outcomes, or financial returns. Past examples, if any, are not guarantees of future outcomes.</p>
+      <h2>Media, Technology, AI, Automation, and Brand Services</h2>
+      <p>IVT Media Group may provide media production, content strategy, brand development, AI-assisted systems, workflow automation, technology consulting, CRM or marketing automation support, integrations, digital operations support, and related business services. Any specific deliverables, timelines, pricing, ownership terms, support levels, confidentiality terms, or service obligations must be stated in a separate written agreement, proposal, statement of work, invoice, or other written arrangement accepted by IVT Media Group LLC.</p>
+
+      <h2>No Guaranteed Business Outcome</h2>
+      <p>We do not guarantee revenue, profit, sales, lead volume, audience growth, follower growth, search ranking, conversion rate, advertising result, automation performance, AI output accuracy, platform approval, compliance approval, or any other business outcome. Case studies, examples, demos, projections, or strategy discussions are illustrative only and are not promises of future results.</p>
+
+      <h2>AI and Automation Limitations</h2>
+      <p>AI systems, automations, integrations, analytics tools, and third-party platforms can produce errors, downtime, inaccurate outputs, unexpected behavior, or incomplete results. You are responsible for reviewing and approving business-critical outputs, legal claims, compliance language, advertising claims, offers, financial statements, and customer-facing content before use unless a separate written agreement states otherwise.</p>
+
+      <h2>Client Materials and Authorization</h2>
+      <p>If you provide logos, brand assets, copy, images, videos, customer lists, CRM data, login access, API keys, platform credentials, advertising materials, workflow details, or other materials, you represent that you have the rights and authority to provide and use those materials. You are responsible for the accuracy, legality, and completeness of materials you provide.</p>
 
       <h2>Form Submissions</h2>
-      <p>When you submit a form, you represent that the information you provide is accurate and that you are authorized to provide it. Submitting a form does not create a client relationship, partnership, employment relationship, joint venture, fiduciary duty, or binding service agreement unless separately agreed in writing by IVT Media Group LLC.</p>
+      <p>When you submit a form, you represent that the information you provide is accurate and that you are authorized to provide it. Submitting a form or booking a call does not create a client relationship, partnership, employment relationship, joint venture, fiduciary duty, or binding service agreement unless separately agreed in writing by IVT Media Group LLC.</p>
 
       <h2>SMS Messaging Terms</h2>
       <p>By checking an SMS consent box and submitting a form, you consent to receive text messages from IVT Media Group LLC at the phone number provided. Message frequency varies. Message and data rates may apply. Consent is not a condition of purchase.</p>
