@@ -10,7 +10,6 @@ export function GhlFormSection() {
           <p className="text-zinc-500 text-lg leading-relaxed text-balance">
             Share your details and IVT Media Group will follow up with the right next step.
           </p>
-          <p className="mt-6 text-sm text-zinc-600">No company field required. Just the contact details needed to start the conversation.</p>
         </div>
         <div className="rounded-2xl border border-zinc-800/70 bg-zinc-900/40 p-3 shadow-2xl shadow-black/40">
           <iframe
