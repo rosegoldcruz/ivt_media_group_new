@@ -2,8 +2,6 @@ import type { NextRequest } from "next/server"
 import { NextResponse } from "next/server"
 import { isProductionDeployment } from "@/lib/seo"
 
-const canonicalHost = "ivtmediagroup.com"
-
 export function proxy(request: NextRequest) {
   const { nextUrl } = request
   const pathname = nextUrl.pathname
@@ -16,16 +14,6 @@ export function proxy(request: NextRequest) {
     const redirectUrl = nextUrl.clone()
     redirectUrl.pathname = shouldRemoveTrailingSlash ? loweredPathname.replace(/\/+$/, "") : loweredPathname
     return NextResponse.redirect(redirectUrl, 308)
-  }
-
-  if (isProductionDeployment) {
-    const host = request.headers.get("host") ?? ""
-    if (host === `www.${canonicalHost}`) {
-      const redirectUrl = nextUrl.clone()
-      redirectUrl.hostname = canonicalHost
-      redirectUrl.protocol = "https"
-      return NextResponse.redirect(redirectUrl, 308)
-    }
   }
 
   const response = NextResponse.next()

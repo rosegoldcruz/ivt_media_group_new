@@ -52,11 +52,13 @@ async function ghlRequest<T>(
 export async function POST(request: Request) {
   const apiKey = process.env.GHL_API_KEY
   const locationId = process.env.GHL_LOCATION_ID
+  const workflowWebhookUrl = process.env.GHL_WORKFLOW_WEBHOOK_URL?.trim() || ""
 
-  if (!apiKey || !locationId) {
+  if ((!apiKey || !locationId) && !workflowWebhookUrl) {
     return json(500, {
       error: "GoHighLevel is not fully configured.",
       required: ["GHL_API_KEY", "GHL_LOCATION_ID"],
+      alternative: "GHL_WORKFLOW_WEBHOOK_URL",
     })
   }
 
@@ -103,6 +105,38 @@ export async function POST(request: Request) {
   }
 
   try {
+    if (workflowWebhookUrl) {
+      const webhookResponse = await fetch(workflowWebhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(leadRecord),
+        cache: "no-store",
+      })
+
+      if (!webhookResponse.ok) {
+        const details = await webhookResponse.text()
+        return json(502, {
+          error: "GoHighLevel workflow webhook rejected the lead payload.",
+          details: details.slice(0, 500),
+        })
+      }
+
+      return json(200, {
+        ok: true,
+        message: "Lead sent to GoHighLevel workflow.",
+        transport: "workflow_webhook",
+      })
+    }
+
+    if (!apiKey || !locationId) {
+      return json(500, {
+        error: "GoHighLevel API credentials are missing.",
+        required: ["GHL_API_KEY", "GHL_LOCATION_ID"],
+      })
+    }
+
     const contactPayload = {
       firstName,
       lastName,
@@ -152,9 +186,14 @@ export async function POST(request: Request) {
           : [],
     })
   } catch (error) {
+    const details = error instanceof Error ? error.message : "Unknown error"
+    const scopeDenied = details.includes("not authorized for this scope")
+
     return json(502, {
-      error: "Unable to sync to GoHighLevel.",
-      details: error instanceof Error ? error.message : "Unknown error",
+      error: scopeDenied
+        ? "GoHighLevel token is missing required scopes for direct API sync. Add scopes for contacts/opportunities or set GHL_WORKFLOW_WEBHOOK_URL."
+        : "Unable to sync to GoHighLevel.",
+      details,
     })
   }
 }
