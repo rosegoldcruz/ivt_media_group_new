@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/sections/hero-section"
 import { ImpactSection } from "@/components/sections/impact-section"
 import { FeaturesSection } from "@/components/sections/features-section"
 import { TestimonialsSection } from "@/components/sections/testimonials-section"
+import { GhlFormSection } from "@/components/sections/ghl-form-section"
 import { FooterSection } from "@/components/sections/footer-section"
 import type { Metadata } from "next"
 import { absoluteUrl, pageMetadata, seoConfig } from "@/lib/seo"
@@ -76,6 +77,7 @@ export default function Home() {
       <ImpactSection />
       <FeaturesSection />
       <TestimonialsSection />
+      <GhlFormSection />
       <FooterSection />
     </main>
   )

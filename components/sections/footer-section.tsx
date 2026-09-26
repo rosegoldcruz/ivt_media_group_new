@@ -9,6 +9,7 @@ const footerLinks = {
   ],
   company: [
     { label: "Company", href: "#company" },
+    { label: "Contact", href: "#contact" },
     { label: "Call 888-368-2502", href: "tel:8883682502" },
   ],
   legal: [
