@@ -10,10 +10,13 @@ export function GhlFormSection() {
             Share your details and IVT Media Group will follow up with the right next step.
           </p>
         </div>
-        <div className="rounded-2xl border border-zinc-800/70 bg-zinc-900/40 p-3 shadow-2xl shadow-black/40">
+        <div
+          className="rounded-2xl border border-zinc-800/70 bg-zinc-900/40 p-3 shadow-2xl shadow-black/40"
+          style={{ height: "1097px" }}
+        >
           <iframe
             src="https://api.leadconnectorhq.com/widget/form/7NCNH4ko17ESX5y3Oq8A"
-            style={{ width: "100%", height: "760px", border: "none", borderRadius: "14px" }}
+            style={{ width: "100%", height: "100%", border: "none", borderRadius: "8px" }}
             id="inline-7NCNH4ko17ESX5y3Oq8A"
             data-layout="{'id':'INLINE'}"
             data-trigger-type="alwaysShow"
@@ -23,12 +26,12 @@ export function GhlFormSection() {
             data-deactivation-type="neverDeactivate"
             data-deactivation-value=""
             data-form-name="Form 8"
-            data-height="760"
+            data-height="1097"
             data-layout-iframe-id="inline-7NCNH4ko17ESX5y3Oq8A"
             data-form-id="7NCNH4ko17ESX5y3Oq8A"
             data-cookie-consent="true"
             data-cookie-consent-provider="auto"
-            title="IVT Media Group contact form"
+            title="Form 8"
           />
         </div>
       </div>
