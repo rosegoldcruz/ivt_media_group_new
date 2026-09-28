@@ -10,13 +10,10 @@ export function GhlFormSection() {
             Share your details and IVT Media Group will follow up with the right next step.
           </p>
         </div>
-        <div
-          className="rounded-2xl border border-zinc-800/70 bg-zinc-900/40 p-3 shadow-2xl shadow-black/40"
-          style={{ height: "1097px" }}
-        >
+        <div className="rounded-2xl border border-zinc-800/70 bg-zinc-900/40 p-3 shadow-2xl shadow-black/40">
           <iframe
             src="https://api.leadconnectorhq.com/widget/form/7NCNH4ko17ESX5y3Oq8A"
-            style={{ width: "100%", height: "100%", border: "none", borderRadius: "8px" }}
+            style={{ width: "100%", height: "1097px", border: "none", borderRadius: "8px" }}
             id="inline-7NCNH4ko17ESX5y3Oq8A"
             data-layout="{'id':'INLINE'}"
             data-trigger-type="alwaysShow"
