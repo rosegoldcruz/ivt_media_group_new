@@ -4,6 +4,7 @@ import { ImpactSection } from "@/components/sections/impact-section"
 import { FeaturesSection } from "@/components/sections/features-section"
 import { TestimonialsSection } from "@/components/sections/testimonials-section"
 import { GhlFormSection } from "@/components/sections/ghl-form-section"
+import { BusinessContactSection } from "@/components/sections/business-contact-section"
 import { FooterSection } from "@/components/sections/footer-section"
 import type { Metadata } from "next"
 import { absoluteUrl, pageMetadata, seoConfig } from "@/lib/seo"
@@ -78,6 +79,7 @@ export default function Home() {
       <FeaturesSection />
       <TestimonialsSection />
       <GhlFormSection />
+      <BusinessContactSection />
       <FooterSection />
     </main>
   )

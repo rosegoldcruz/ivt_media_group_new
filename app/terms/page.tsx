@@ -3,7 +3,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { pageMetadata } from "@/lib/seo"
 
-const lastUpdated = "September 26, 2026"
+const lastUpdated = "September 29, 2026"
 
 export const metadata: Metadata = pageMetadata({
   title: "Terms of Service",
@@ -92,7 +92,8 @@ export default function TermsPage() {
       <p>These Terms are governed by applicable laws of the United States and the laws applicable to IVT Media Group LLC, without regard to conflict of law principles, unless a different rule is required by applicable law.</p>
 
       <h2>Contact</h2>
-      <p>For questions about these Terms or SMS messaging support, call IVT Media Group LLC at <a href="tel:8883682502">888-368-2502</a>.</p>
+      <p>For questions about these Terms or SMS messaging support, contact IVT Media Group LLC at <a href="tel:+15203555616">520-355-5616</a> or <a href="mailto:chris@ivtmediagroup.com">chris@ivtmediagroup.com</a>. For business support, call <a href="tel:+18883682502">888-368-2502</a> or email <a href="mailto:support@ivtmediagroup.com">support@ivtmediagroup.com</a>.</p>
+      <p>Business mailing address: 5830 East 2nd Street, Suite 7000 #36157, Casper, Wyoming 82609.</p>
     </LegalPage>
   )
 }
