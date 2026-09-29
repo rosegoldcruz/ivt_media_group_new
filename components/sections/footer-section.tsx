@@ -10,7 +10,6 @@ const footerLinks = {
   company: [
     { label: "Company", href: "#company" },
     { label: "Business Contact", href: "#business-contact" },
-    { label: "Call 888-368-2502", href: "tel:8883682502" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },
@@ -76,23 +75,10 @@ export function FooterSection() {
           </div>
         </div>
 
-        <div className="mb-12 grid gap-6 border-t border-zinc-900 pt-8 text-sm text-zinc-400 md:grid-cols-2">
-          <div>
-            <p className="mb-2 font-semibold text-zinc-100">Phone and email</p>
-            <p><a href="tel:+15203555616" className="hover:text-zinc-100">520-355-5616</a> · <a href="mailto:chris@ivtmediagroup.com" className="hover:text-zinc-100">chris@ivtmediagroup.com</a></p>
-            <p><a href="tel:+18883682502" className="hover:text-zinc-100">888-368-2502</a> · <a href="mailto:support@ivtmediagroup.com" className="hover:text-zinc-100">support@ivtmediagroup.com</a></p>
-          </div>
-          <div>
-            <p className="mb-2 font-semibold text-zinc-100">Business mailing address</p>
-            <address className="not-italic">5830 East 2nd Street<br />Suite 7000 #36157<br />Casper, Wyoming 82609</address>
-          </div>
-        </div>
-
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-zinc-900 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-zinc-600">
-            © {new Date().getFullYear()} IVT Media Group LLC. All rights reserved.{" "}
-            <span className="text-zinc-500">888-368-2502</span>
+            © {new Date().getFullYear()} IVT Media Group LLC. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <Link href="#" className="text-zinc-500 hover:text-zinc-300 transition-colors" aria-label="GitHub">
